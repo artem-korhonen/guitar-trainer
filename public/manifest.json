@@ -1,0 +1,13 @@
+{
+    "short_name": "GuitarTrainer",
+    "name": "Guitar Trainer",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "type": "image/ico",
+            "sizes": "256x256"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone"
+}
