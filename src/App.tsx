@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import { useState } from "react";
 
 import MenuPage from "./MenuPage";
@@ -8,7 +8,7 @@ function App() {
     const [stringNow, setStringNow] = useState<number | "all">();
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route
                     path="/"
@@ -24,7 +24,7 @@ function App() {
                     }
                 />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
