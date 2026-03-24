@@ -8,6 +8,6 @@
             "sizes": "256x256"
         }
     ],
-    "start_url": "/",
+    "start_url": "/guitar-trainer/",
     "display": "standalone"
 }
