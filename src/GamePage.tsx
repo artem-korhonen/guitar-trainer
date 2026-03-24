@@ -41,7 +41,7 @@ function GamePage({ stringNow }: { stringNow: number | "all" }) {
     }, [])
 
     return (
-        <div className="p-6 min-h-screen bg-[#050505] bg-[radial-gradient(circle_at_50%_50%,#191919_0%,#050505_100%)] w-full flex flex-col items-center justify-center gap-10">
+        <div className="p-6 min-h-screen bg-[#050505] bg-[radial-gradient(circle_at_50%_50%,#202020_0%,#050505_100%)] w-full flex flex-col items-center justify-center gap-10">
             <h1 className="text-4xl md:text-6xl text-center p-2 font-extrabold bg-gradient-to-b from-[#fff] to-[#888] bg-clip-text text-transparent">Струна {actualString}, лад {lad}</h1>
             <div className="flex flex-wrap justify-center gap-10 items-center">
                 {variants.map((text) => (

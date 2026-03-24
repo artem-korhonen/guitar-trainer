@@ -6,7 +6,7 @@ function MenuPage({ setStringNow }: { setStringNow: React.Dispatch<React.SetStat
 
     return (
         <div>
-            <div className="p-6 min-h-screen bg-[#050505] bg-[radial-gradient(circle_at_50%_50%,#191919_0%,#050505_100%)] w-full flex flex-col items-center justify-center gap-10">
+            <div className="p-6 min-h-screen bg-[#050505] bg-[radial-gradient(circle_at_50%_50%,#202020_0%,#050505_100%)] w-full flex flex-col items-center justify-center gap-10">
                 <h1 className="text-4xl md:text-6xl p-2 font-extrabold bg-gradient-to-b from-[#fff] to-[#888] bg-clip-text text-transparent">Guitar Trainer</h1>
                 <div className="flex items-center justify-center flex-wrap gap-10">
                     {Object.keys(GUITARS).map((_, index) => (
