@@ -11,7 +11,7 @@ function shuffle(arr: string[]): string[] {
     return arr;
 }
 
-function GamePage({ stringNow, playSound }: { stringNow: number | "all", playSound: () => void }) {
+function GamePage({ stringNow }: { stringNow: number | "all" }) {
     const navigate = useNavigate();
 
     const [actualString, setActualString] = useState<number>();
@@ -46,7 +46,6 @@ function GamePage({ stringNow, playSound }: { stringNow: number | "all", playSou
             <div className="flex flex-wrap justify-center gap-10 items-center">
                 {variants.map((text) => (
                     <button className={`${selected ? (answer === text ? "bg-[#0f0]" : "bg-[#300]") : "bg-[#222]"} min-w-30 min-h-20 font-bold text-white text-md md:text-2xl cursor-pointer p-5 border border-[#888] shadow-white shadow-sm hover:shadow-lg inset-shadow-white inset-shadow-lg transition-all pos-0 hover:-translate-y-1 rounded rounded-2xl`} onClick={() => {
-                        playSound();
                         setSelected(text);
                         setRepeatActive(true);
                     }}>{text}</button>
@@ -55,12 +54,10 @@ function GamePage({ stringNow, playSound }: { stringNow: number | "all", playSou
             <div className="flex flex-wrap gap-10">
                 <button className={`min-h-20 min-w-30 font-bold text-lg md:text-2xl cursor-pointer p-5 border ${repeatActive ? "text-white border-[#888] bg-[#222] shadow-white shadow-sm hover:shadow-lg" : "text-[#888] border-[#333] bg-[#111]"} inset-shadow-white inset-shadow-lg transition-all pos-0 hover:-translate-y-1 rounded rounded-2xl`} onClick={() => {
                     if (repeatActive) {
-                        playSound();
                         updateData();
                     }
                 }}>Ещё раз</button>
                 <button className="min-h-20 min-w-30 font-bold text-[#f00] text-lg md:text-2xl cursor-pointer p-5 border border-[#f00] shadow-[#a00] shadow-sm hover:shadow-lg transition-all pos-0 hover:-translate-y-1 rounded rounded-2xl bg-[#222]" onClick={() => {
-                    playSound();
                     navigate("/");
                 }}>Назад</button>
             </div>
